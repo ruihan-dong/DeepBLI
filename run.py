@@ -3,14 +3,14 @@
 
 # choose GPU number
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 import DeepPurpose.DTI_multi as models
 from DeepPurpose.utils_multi import *
 import DeepPurpose.dataset as dataset
 
 # Pre-train
-X_drug, X_target, y = dataset.read_file_training_dataset_drug_target_pairs('./data/kinase_all.txt')
+X_drug, X_target, y = dataset.read_file_training_dataset_drug_target_pairs('./data/kinase.txt')
 
 drug_encoding_1 = 'DGL_GCN'
 target_encoding_1 = 'CNN'
@@ -41,7 +41,7 @@ model.save_model('./model')
 
 
 # Fine-tune and test
-X_drug_ft, X_target_ft, y_ft = dataset.read_file_training_dataset_drug_target_pairs('./data/test_blue1.txt')
+X_drug_ft, X_target_ft, y_ft = dataset.read_file_training_dataset_drug_target_pairs('./data/beta-lactamase dataset.txt')
 drug_encoding_1 = 'DGL_GCN'
 target_encoding_1 = 'CNN'
 drug_encoding_2 = 'DGL_AttentiveFP'
