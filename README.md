@@ -4,7 +4,7 @@
 
 #### Dependencies
 
-Python3, PyTorch, RDkit, [DeepPurpose](https://github.com/kexinhuang12345/DeepPurpose)
+Python3, PyTorch (>=1.9.0), RDkit, [DeepPurpose](https://github.com/kexinhuang12345/DeepPurpose), DGL
 
 #### Datasets
 
@@ -17,7 +17,7 @@ Beta-lactamase dataset we collected can be found in this repository(./data/beta-
 ##### Training
 
 ```bash
-python3 train.py
+python train.py
 ```
 
 DeepBLI is developed based on DeepPurpose library. Modification for multi-channel model are in `DTI_multi.py` and `utils_multi.py` files. `train.py` involves the pre-training and fine-tuning parts of code. 
@@ -37,6 +37,9 @@ The label of 0/1 is not associated with the predicting result.
 2) Run the script
 
 ```bash
-python3 predict.py
+python predict.py
 ```
 
+----
+#### Contact
+ruihandong@tju.edu.cn
