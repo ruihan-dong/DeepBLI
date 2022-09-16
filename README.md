@@ -40,6 +40,3 @@ The label of 0/1 is not associated with the predicting result.
 python predict.py
 ```
 
-----
-#### Contact
-ruihandong@tju.edu.cn
